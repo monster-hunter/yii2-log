@@ -42,6 +42,6 @@ class Module extends BaseModule
      */
     public static function t($category, $message, $params = [], $language = null)
     {
-        return Yii::t('zacksleo/yii2/backend/' . $category, $message, $params, $language);
+	    return Yii::t('monsterhunter/yii2/log/' . $category, $message, $params, $language);
     }
 }
