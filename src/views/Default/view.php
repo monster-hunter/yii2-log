@@ -11,7 +11,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="system-log-view">
 
     <?php echo DetailView::widget([
-        'models' => $model,
+        'model' => $model,
         'attributes' => [
             'id',
             'level',

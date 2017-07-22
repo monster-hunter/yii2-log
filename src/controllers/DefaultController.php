@@ -13,7 +13,7 @@ use yii\web\NotFoundHttpException;
 /**
  * LogController implements the CRUD actions for SystemLog models.
  */
-class LogController extends Controller
+class DefaultController extends Controller
 {
 
     public function behaviors()
@@ -61,7 +61,7 @@ class LogController extends Controller
     public function actionView($id)
     {
         return $this->render('view', [
-            'models' => $this->findModel($id),
+            'model' => $this->findModel($id),
         ]);
     }
 
