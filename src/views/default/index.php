@@ -16,9 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?php echo Html::a(Module::t('log', 'Clear'), false, ['class' => 'btn btn-danger', 'data-method' => 'delete']) ?>
     </p>
-
-    <?php // echo $this->render('_search', ['models' => $searchModel]); ?>
-
+    
     <?php echo GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,

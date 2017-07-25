@@ -15,7 +15,6 @@ use yii\web\NotFoundHttpException;
  */
 class DefaultController extends Controller
 {
-
     public function behaviors()
     {
         return [
@@ -35,7 +34,6 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-
         $searchModel = new SystemLogSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
