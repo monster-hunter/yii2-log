@@ -2,7 +2,6 @@
 
 namespace monsterhunter\yii2\log\controllers;
 
-
 use monsterhunter\yii2\log\models\search\SystemLogSearch;
 use monsterhunter\yii2\log\models\SystemLog;
 use yii;
@@ -15,7 +14,6 @@ use yii\web\NotFoundHttpException;
  */
 class DefaultController extends Controller
 {
-
     public function behaviors()
     {
         return [
@@ -35,7 +33,6 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-
         $searchModel = new SystemLogSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
