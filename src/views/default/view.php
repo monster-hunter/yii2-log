@@ -2,10 +2,10 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use monsterhunter\yii2\log\Module;
 
-
-$this->title = Yii::t('app', 'Error #{id}', ['id'=>$model->id]);
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'System Logs'), 'url' => ['index']];
+$this->title = Yii::t('app', 'Error #{id}', ['id' => $model->id]);
+$this->params['breadcrumbs'][] = ['label' => Module::t('log', 'System Logs'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="system-log-view">
@@ -19,13 +19,13 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'log_time',
                 'format' => 'datetime',
-                'value' => (int) $model->log_time
+                'value' => (int)$model->log_time
             ],
             'prefix:ntext',
             [
-                'attribute'=>'message',
-                'format'=>'raw',
-                'value'=>Html::tag('pre', $model->message, ['style'=>'white-space: pre-wrap'])
+                'attribute' => 'message',
+                'format' => 'raw',
+                'value' => Html::tag('pre', $model->message, ['style' => 'white-space: pre-wrap'])
             ],
         ],
     ]) ?>

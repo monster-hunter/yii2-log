@@ -2,7 +2,7 @@
 
 namespace monsterhunter\yii2\log\models;
 
-use Yii;
+use monsterhunter\yii2\log\Module;
 
 /**
  * This is the models class for table "system_log".
@@ -17,6 +17,7 @@ use Yii;
 class SystemLog extends \yii\db\ActiveRecord
 {
     const CATEGORY_NOTIFICATION = 'notification';
+
     /**
      * @inheritdoc
      */
@@ -44,12 +45,12 @@ class SystemLog extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'level' => Yii::t('app', 'Level'),
-            'category' => Yii::t('app', 'Category'),
-            'log_time' => Yii::t('app', 'Log Time'),
-            'prefix' => Yii::t('app', 'Prefix'),
-            'message' => Yii::t('app', 'Message'),
+            'id' => Module::t('log', 'ID'),
+            'level' => Module::t('log', 'Level'),
+            'category' => Module::t('log', 'Category'),
+            'log_time' => Module::t('log', 'Log Time'),
+            'prefix' => Module::t('log', 'Prefix'),
+            'message' => Module::t('log', 'Message'),
         ];
     }
 }

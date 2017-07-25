@@ -27,6 +27,22 @@ class Module extends BaseModule
     public function init()
     {
         parent::init();
+        $this->registerTranslations();
+    }
+
+    /**
+     * Registers the translation files
+     */
+    protected function registerTranslations()
+    {
+        Yii::$app->i18n->translations['monsterhunter/yii2/log/*'] = [
+            'class' => 'yii\i18n\PhpMessageSource',
+            'sourceLanguage' => $this->sourceLanguage,
+            'basePath' => __DIR__ . '/messages',
+            'fileMap' => [
+                'monsterhunter/yii2/log/log' => 'log.php',
+            ],
+        ];
     }
 
     /**
@@ -42,6 +58,6 @@ class Module extends BaseModule
      */
     public static function t($category, $message, $params = [], $language = null)
     {
-	    return Yii::t('monsterhunter/yii2/log/' . $category, $message, $params, $language);
+        return Yii::t('monsterhunter/yii2/log/' . $category, $message, $params, $language);
     }
 }
