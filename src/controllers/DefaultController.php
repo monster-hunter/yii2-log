@@ -2,7 +2,6 @@
 
 namespace monsterhunter\yii2\log\controllers;
 
-
 use monsterhunter\yii2\log\models\search\SystemLogSearch;
 use monsterhunter\yii2\log\models\SystemLog;
 use yii;
