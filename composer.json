@@ -6,13 +6,26 @@
   "authors": [
     {
       "name": "monsterhunter",
-      "email": "monsterhunter@gmail.com"
+      "email": "zhangjunwei@lianluo.com"
     }
   ],
   "minimum-stability": "dev",
+  "require": {
+    "yiisoft/yii2": ">=2.0.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0"
+  },
   "autoload": {
     "psr-4": {
-      "monsterhunter\\yii2\\log\\": "src"
+      "monsterhunter\\yii2\\log\\": "src",
+      "monsterhunter\\yii2\\log\\tests\\": "tests"
     }
-  }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ]
 }
