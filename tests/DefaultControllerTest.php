@@ -8,7 +8,6 @@
 
 namespace monsterhunter\yii2\log\tests;
 
-
 use Yii;
 use yii\log\Logger;
 

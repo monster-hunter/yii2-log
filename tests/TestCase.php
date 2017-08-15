@@ -191,7 +191,7 @@ EOF;
         try {
             $db->createCommand($sql)->execute();
         } catch (Exception $e) {
-
+            return;
         }
     }
 

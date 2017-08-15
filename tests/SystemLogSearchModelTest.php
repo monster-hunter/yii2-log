@@ -8,7 +8,6 @@
 
 namespace monsterhunter\yii2\log\tests;
 
-
 use monsterhunter\yii2\log\models\search\SystemLogSearch;
 use yii\log\Logger;
 use yii;
@@ -18,8 +17,8 @@ class SystemLogSearchModelTest extends TestCase
     public function testSearch()
     {
         $params = [
-            'SystemLogSearch'=>[
-                'level'=>Logger::LEVEL_ERROR
+            'SystemLogSearch' => [
+                'level' => Logger::LEVEL_ERROR
             ]
         ];
         $model = new SystemLogSearch();
@@ -27,8 +26,8 @@ class SystemLogSearchModelTest extends TestCase
         $this->assertTrue($res->count == 1);
 
         $params = [
-            'SystemLogSearch'=>[
-                'level'=>Logger::LEVEL_INFO
+            'SystemLogSearch' => [
+                'level' => Logger::LEVEL_INFO
             ]
         ];
         $model = new SystemLogSearch();

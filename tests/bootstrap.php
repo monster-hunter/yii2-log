@@ -15,8 +15,6 @@ require_once(__DIR__ . '/../vendor/yiisoft/yii2/Yii.php');
 
 Yii::setAlias('@tests', __DIR__);
 
-
-
 Yii::setAlias('@migrate', dirname(__DIR__) . '/vendor/yiisoft/yii2/log/migrations');
 
 
