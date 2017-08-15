@@ -1,3 +1,4 @@
+[![StyleCI](https://styleci.io/repos/97901112/shield?branch=master)](https://styleci.io/repos/97901112)
 [![Build Status](https://travis-ci.org/monster-hunter/yii2-log.svg?branch=master)](https://travis-ci.org/monster-hunter/yii2-log)
 
 # Yii2 Log Module
