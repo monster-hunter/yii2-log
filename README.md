@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/monster-hunter/yii2-log.svg?branch=master)](https://travis-ci.org/monster-hunter/yii2-log)
+
 # Yii2 Log Module
 
 1 执行数据库迁移:
