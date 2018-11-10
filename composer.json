@@ -11,14 +11,18 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "yiisoft/yii2": ">=2.0.6"
+    "yiisoft/yii2": "^2.0"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.0"
   },
   "autoload": {
     "psr-4": {
-      "monsterhunter\\yii2\\log\\": "src",
+      "monsterhunter\\yii2\\log\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
       "monsterhunter\\yii2\\log\\tests\\": "tests"
     }
   },
