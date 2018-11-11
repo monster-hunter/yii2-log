@@ -77,7 +77,6 @@ class TestCase extends PHPUnit_Framework_TestCase
                         'logVars' => [],
                         'logTable' => '{{%system_log}}'
                     ],
-                    'class' => 'yii\log\Logger',
                 ],
             ],
             'modules' => [
@@ -123,7 +122,6 @@ class TestCase extends PHPUnit_Framework_TestCase
                         'logVars' => [],
                         'logTable' => '{{%system_log}}'
                     ],
-                    'class' => 'yii\log\Logger',
                 ],
             ],
             'modules' => [
