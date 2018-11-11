@@ -9,6 +9,7 @@
       "email": "zhangjunwei@lianluo.com"
     }
   ],
+  "minimum-stability": "dev",
   "require": {
     "yiisoft/yii2": "^2.0"
   },
