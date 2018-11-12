@@ -9,19 +9,42 @@
 
 # Yii2 Log Module
 
-1 执行数据库迁移:
-       
-```       
-  ./yii migrate --migrationPath=@yii/log/migrations/
-        
-```
-2 配置module：
+## Run migrations
 
-
+```bash
+  php yii migrate --migrationPath=@yii/log/migrations/
 ```
-  'log' => [
-      'class' => 'monsterhunter\yii2\log\Module',
-      'layout' =>'@app/views/layouts/main'  //your layout  
-  ]
-  
+
+## Config backend module
+
+```php
+'modules'=> [
+    'log' => [
+        'class' => 'monsterhunter\yii2\log\Module',
+        //'layout' =>'@app/views/layouts/main'  //custom layout  
+    ]
+]
+```
+
+## Config log compoennt
+
+```php
+'components' => [
+    'log' => [
+        'traceLevel' => YII_DEBUG ? 3 : 0,
+        'targets' => [
+            [
+                'class' => 'yii\log\DbTarget',
+                'levels' => ['error', 'warning'],
+                'except' => ['yii\web\HttpException:404'],
+                'prefix' => function () {
+                    $url = !Yii::$app->request->isConsoleRequest ? Yii::$app->request->getUrl() : null;
+                    return sprintf('[%s][%s]', Yii::$app->id, $url);
+                },
+                'logVars' => [],
+                'logTable' => '{{%system_log}}'
+            ],
+        ],
+    ],
+]
 ```

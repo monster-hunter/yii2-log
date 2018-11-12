@@ -179,11 +179,11 @@ class TestCase extends PHPUnit_Framework_TestCase
                 message text null
             )
             ;
-            
+
             create index idx_log_category
                 on tb_system_log (category)
             ;
-            
+
             create index idx_log_level
                 on tb_system_log (level)
             ;
