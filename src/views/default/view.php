@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 use monsterhunter\yii2\log\Module;
 
-$this->title = Yii::t('app', 'Error #{id}', ['id' => $model->id]);
+$this->title = 'Error #' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => Module::t('log', 'System Logs'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
